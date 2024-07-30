@@ -72,6 +72,7 @@ export class BasketService {
     basket.items = this.upsertItems(basket.items, itemToAdd, quantity);
     this.setBasket(basket);
   }
+  
   upsertItems(items: BasketItem[], itemToAdd: BasketItem, quantity: number): BasketItem[]{
     const item = items.find(x=>x.id === itemToAdd.id);
     if(item){

@@ -59,6 +59,7 @@ public class BasketServiceImpl implements BasketService{
         log.info("Creating Basket");
         Basket savedBasket = basketRepository.save(basket);
         log.info("Basket created by Id : {}", savedBasket.getId());
+        log.info("Getting the full basket item {}", savedBasket);
         return convertToBasketResponse(savedBasket);
     }
 
